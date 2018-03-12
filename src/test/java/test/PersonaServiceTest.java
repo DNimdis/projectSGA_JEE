@@ -8,6 +8,7 @@ package test;
 import java.util.List;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
+import javax.naming.InitialContext;
 import mx.com.sga.servicio.PersonaServiceLocal;
 import mx.com.sga.domain.Persona;
 import org.junit.Test;
@@ -20,46 +21,30 @@ import org.junit.Before;
  */
 public class PersonaServiceTest {
 
-    private PersonaServiceLocal clienteService;
-    
-    EJBContainer contenedor;
+    private static PersonaServiceLocal clienteService;
     
    @Before
-    public void iniciarContenedor() throws Exception {
-         contenedor = EJBContainer.createEJBContainer();
-         System.out.println("Iniciando EJB Container mio");
-         clienteService =  (PersonaServiceLocal) contenedor.getContext().lookup("java:global/classes/PersonaServiceImpl!mx.com.sga.servicio.PersonaServiceLocal");
+   public void setup() throws Exception{
+        EJBContainer contenedor = EJBContainer.createEJBContainer();                        
+        clienteService =  (PersonaServiceLocal) contenedor.getContext().lookup("java:global/classes/PersonaServiceImpl!mx.com.sga.servicio.PersonaServiceLocal");
          
     }
     
     @Test
-    public void testEJB() {
-        this.testEJBPersonaService();        
-    }
-    
-    private void testEJBPersonaService() {
+    public void testEJBPersonaService() {
         System.out.println("Iniciando test EJB PersonaService");
         assertTrue(clienteService != null);
-
         assertEquals(2, clienteService.listaPersonas().size());
-
+        
         System.out.println("El no. de personas es igual a:" + clienteService.listaPersonas().size());
-
         this.desplegarPersonas(clienteService.listaPersonas());
         System.out.println("Fin test EJB PersonaService");
     }
-
-
-
-    private void desplegarPersonas(List<Persona> personas) {
-
-        for (Persona p : personas) {
-            System.out.println(p);
-        }
-        //Esto genera un error ya que el servidor embebido no soporta Java 8
-        //personas.forEach((persona) -> {
-        //    System.out.println(persona);
-        //});
-    }
     
+    private void desplegarPersonas(List<Persona> personas) {
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+    }
+
 }

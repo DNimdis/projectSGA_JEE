@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="test.PersonaServiceTest" time="84.074" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="test.PersonaServiceTest" time="95.687" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -61,13 +61,13 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="test.PersonaServiceTest" name="testEJB" time="83.462">
+  <testcase classname="test.PersonaServiceTest" name="testEJBPersonaService" time="95.437">
     <error message="Failed to deploy EJB modules - see log for details" type="javax.ejb.EJBException">javax.ejb.EJBException: Failed to deploy EJB modules - see log for details
 	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:149)
 	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
-	at test.PersonaServiceTest.iniciarContenedor(PersonaServiceTest.java:29)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,496 +98,524 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]
-JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]
-JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]
+    <system-out>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+[EL Info]: server: 2018-03-12 03:12:14.041--Detected server platform: org.eclipse.persistence.platform.server.NoServerPlatform.
+JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
 </system-out>
-    <system-err>mar 08, 2018 2:27:20 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
-INFORMACIÓN: [EJBContainerProviderImpl] Using installation location /home/nestordev/Documentos/programas/glassfish5/glassfish
-mar 08, 2018 2:27:20 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
-INFORMACIÓN: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain3711922025384275792xml
-mar 08, 2018 2:27:21 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+    <system-err>mar 12, 2018 3:11:29 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+INFORMACIÓN: [EJBContainerProviderImpl] Using installation location /home/nestordev/Documentos/programas/glassfish4/glassfish
+mar 12, 2018 3:11:29 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+INFORMACIÓN: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain5072373815407600842xml
+mar 12, 2018 3:11:30 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
 INFORMACIÓN: [EJBContainerProviderImpl] Using runtime class: class com.sun.enterprise.glassfish.bootstrap.StaticGlassFishRuntime
-ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property &apos;org.apache.logging.log4j.simplelog.StatusLogger.level&apos; to TRACE to show Log4j2 internal initialization logging.
-mar 08, 2018 2:27:38 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
-INFORMACIÓN: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
-mar 08, 2018 2:27:38 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
-INFORMACIÓN: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
-mar 08, 2018 2:27:38 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
-INFORMACIÓN: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
-mar 08, 2018 2:27:39 AM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+mar 12, 2018 3:11:34 AM org.hibernate.validator.internal.util.Version &lt;clinit&gt;
+INFO: HV000001: Hibernate Validator 5.1.2.Final
+mar 12, 2018 3:11:35 AM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
 INFORMACIÓN: Authorization Service has successfully initialized.
-mar 08, 2018 2:27:40 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+mar 12, 2018 3:11:35 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMACIÓN: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+mar 12, 2018 3:11:35 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMACIÓN: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+mar 12, 2018 3:11:35 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMACIÓN: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
+mar 12, 2018 3:11:35 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
 INFORMACIÓN: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
-mar 08, 2018 2:27:40 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
-INFORMACIÓN: GlassFish Server Open Source Edition  5.0  (25) startup time : Embedded (7,232ms), startup services(11,484ms), total(18,716ms)
-mar 08, 2018 2:27:40 AM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
+mar 12, 2018 3:11:35 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+INFORMACIÓN: GlassFish Server Open Source Edition  4.1.2  (1) startup time : Embedded (3,012ms), startup services(2,774ms), total(5,786ms)
+mar 12, 2018 3:11:36 AM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
 INFORMACIÓN: JTS5014: Recoverable JTS instance, serverId = [100]
-mar 08, 2018 2:27:40 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+mar 12, 2018 3:11:36 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
 INFORMACIÓN: JMXStartupService has disabled JMXConnector system
-mar 08, 2018 2:27:41 AM org.jvnet.hk2.config.Transactions$ConfigListenerNotifier$1 call
-GRAVE: Config Listener notification got interrupted
-java.util.concurrent.ExecutionException: java.lang.ArrayIndexOutOfBoundsException: 5
-	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.util.concurrent.FutureTask.get(FutureTask.java:206)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerNotifier$1.call(Transactions.java:290)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerNotifier$1.call(Transactions.java:269)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.jvnet.hk2.config.Transactions$Notifier$1$1.run(Transactions.java:168)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: 5
-	at com.sun.enterprise.connectors.jms.system.JMSConfigListener.changed(JMSConfigListener.java:194)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerJob.process(Transactions.java:401)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerJob.process(Transactions.java:391)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerNotifier$1$1.call(Transactions.java:281)
-	at org.jvnet.hk2.config.Transactions$ConfigListenerNotifier$1$1.call(Transactions.java:279)
-	... 4 more
-
-mar 08, 2018 2:27:41 AM com.sun.enterprise.connectors.jms.util.JmsRaUtil getInstalledMqVersion
-ADVERTENCIA: jmsra.upgrade_check_failed
-mar 08, 2018 2:27:41 AM com.sun.enterprise.v3.services.impl.GrizzlyProxy start0
-INFORMACIÓN: Grizzly Framework 2.4.1 started in: 53ms - bound to [/0.0.0.0:7676]
-mar 08, 2018 2:27:42 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+mar 12, 2018 3:11:37 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 INFORMACIÓN: JMXStartupService and JMXConnectors have been shut down.
-mar 08, 2018 2:27:42 AM com.sun.enterprise.v3.server.AppServerStartup stop
+mar 12, 2018 3:11:37 AM com.sun.enterprise.v3.server.AppServerStartup stop
 INFORMACIÓN: Shutdown procedure finished
-mar 08, 2018 2:27:43 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+mar 12, 2018 3:11:37 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
 INFORMACIÓN: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
-mar 08, 2018 2:27:43 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
-INFORMACIÓN: GlassFish Server Open Source Edition  5.0  (25) startup time : Embedded (21,649ms), startup services(452ms), total(22,101ms)
-mar 08, 2018 2:27:43 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+mar 12, 2018 3:11:37 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+INFORMACIÓN: GlassFish Server Open Source Edition  4.1.2  (1) startup time : Embedded (7,497ms), startup services(41ms), total(7,538ms)
+mar 12, 2018 3:11:37 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
 INFORMACIÓN: JMXStartupService has disabled JMXConnector system
-mar 08, 2018 2:27:44 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:37 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-embedded-static-shell.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-client-4.1.2.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-client-module-4.1.2.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-core-2.4.0-b31.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-locator-2.4.0-b31.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: javax.inject-2.4.0-b31.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: aopalliance-repackaged-2.4.0-b31.jar
-mar 08, 2018 2:27:45 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-api-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-utils-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: common-util-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ejb-full-container-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ejb-container-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ejb-client-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: stats77-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: asm-all-3.3.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: container-common-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: internal-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: config-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: admin-util-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: security-services-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: security-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ssl-impl-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ldapbp-repackaged-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: connectors-internal-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ha-api-3.1.8.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: dol-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: deployment-common-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: annotation-framework-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: appclient.security-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: security-ee-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-ee-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jaspic.provider.framework-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: libpam4j-repackaged-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ejb.security-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: scattered-archive-api-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: config-types-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-config-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: bean-validator-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: hk2-runlevel-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: class-model-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: asm-all-repackaged-2.4.0-b31.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: nucleus-grizzly-all-4.1.2.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-portunif-2.3.23.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-http-2.3.23.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-http-server-2.3.23.jar
-mar 08, 2018 2:27:46 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-config-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: management-api-3.2.1-b002.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: webservices.security-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: kernel-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: flashlight-framework-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: logging-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-glue-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-cli-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: amx-javaee-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: amx-core-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: war-util-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-naming-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-core-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: javax.servlet.jsp-2.3.3-b02.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: admin-core-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-gui-plugin-common-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-embed-api-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-web-connector-4.1.2.jar
-mar 08, 2018 2:27:47 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: web-sse-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: webservices-osgi-2.3.2-b608.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: webservices-extra-jdk-packages-2.3.2-b608.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: websecurity-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jsr109-impl-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-http-servlet-2.3.23.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-naming-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: work-management-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: transaction-internal-api-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gmbal-4.0.0-b001.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-tf-4.0.0-b003.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-basic-tools-4.0.0-b003.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-tf-tools-4.0.0-b003.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: connectors-inbound-runtime-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: connectors-runtime-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-connectors-connector-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: ejb-internal-api-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: orb-connector-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: orb-enabler-4.1.2.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-basic-4.0.0-b004.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-corba-omgapi-4.0.1.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-corba-internal-api-4.0.1.jar
-mar 08, 2018 2:27:48 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: monitoring-core-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: webservices-connector-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-corba-orb-4.0.1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-corba-csiv2-idl-4.0.1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-dynamic-4.0.0-b004.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: grizzly-framework-2.2.10.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: orb-iiop-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gms-bootstrap-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: pfl-asm-4.0.0-b004.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: simple-glassfish-api-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: acc-config-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jts-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jta-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jms-core-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-jms-connector-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: glassfish-mbeanserver-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jmxremote_optional-repackaged-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: gf-ejb-connector-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.core-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.jpa-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.jpa.jpql-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.jpa.modelgen.processor-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.moxy-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.dbws-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.oracle-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.antlr-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.asm-2.6.1-RC1.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: jpa-container-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: persistence-common-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: deployment-javaee-core-4.1.2.jar
-mar 08, 2018 2:27:49 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:38 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: cmp-internal-api-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: webservices-api-osgi-2.3.2-b608.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: appclient-connector-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: javamail-connector-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: resources-connector-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: nucleus-resources-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: javamail-runtime-4.1.2.jar
-mar 08, 2018 2:27:50 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+mar 12, 2018 3:11:39 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 INFORMACIÓN: ... skipping entry with a Manifest file with a special attribute: javax.json-1.0.4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+mar 12, 2018 3:11:40 AM org.glassfish.deployment.common.GenericAnnotationDetector scanArchive
+ADVERTENCIA: Failed to scan archive for annotations: 22528
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 INFORMACIÓN: [DeploymentElement] adding EJB module to ScatteredArchive classes
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.el-3.0.1-b09.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive tiger-types-1.4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.mail-1.5.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-logging-3.1.3.GA.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive simplestub-1.0.4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.persistence-2.1.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jaxb-api-2.2.13-b141020.1521.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.xml.registry-api-1.0.7.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.enterprise.deploy-api-1.6.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive api-exporter-4.1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive hamcrest-library-1.3.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-core-2.5.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jaxb-extra-osgi-2.2.12-b141219.1637.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.el-api-3.0.1-b03.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.xml.rpc-api-1.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-api-2.2.SP4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.ejb-api-3.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.security.jacc-api-1.5.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jaxb-osgi-2.2.12-b141219.1637.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive commons-logging-1.1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.inject-1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-jaxrs-base-2.5.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive log4j-api-2.8.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive hamcrest-core-1.3.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive gmbal-api-only-3.0.0-b023.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-el-api_3.0_spec-1.0.0.Alpha1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.servlet-api-3.1.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive stax2-api-3.1.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-annotations-2.5.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive exception-annotation-processor-4.0.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.mail-api-1.5.4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.security.auth.message-api-1.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.jms-api-2.0.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive guava-13.0.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive tools.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-core-impl-2.2.13.Final.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive cdi-api-1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javaee-api-7.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-environment-common-2.2.13.Final.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive woodstox-core-asl-4.2.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.servlet.jsp-api-2.3.2-b01.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive test-classes
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive mimepull-1.9.4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive validation-api-1.1.0.Final.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive activation-1.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive junit-4.12.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.41.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.transaction-api-1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.resource-api-1.7.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.interceptor-api-1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-classfilewriter-1.0.5.Final.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javassist-3.18.1-GA.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive org.osgi.core-1.2.0.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-se-core-2.2.13.Final.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.annotation-api-1.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive shoal-gms-api-1.6.18.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.management.j2ee-api-1.1.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-databind-2.5.1.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive xmlsec-1.5.8.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-spi-2.2.SP4.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive log4j-core-2.8.2.jar
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
-INFORMACIÓN: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@325fa8c
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.servlet.jsp-api-2.3.2-b01.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-logging-3.1.3.GA.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive mimepull-1.9.4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.servlet-api-3.1.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive junit-4.12.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-core-2.5.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jaxb-api-2.2.13-b141020.1521.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-jaxrs-base-2.5.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.41.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.enterprise.deploy-api-1.6.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.transaction-api-1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.annotation-api-1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javaee-api-7.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive commons-logging-1.1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive stax2-api-3.1.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-core-impl-2.2.13.Final.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive cdi-api-1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javassist-3.18.1-GA.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.resource-api-1.7.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-spi-2.2.SP4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.xml.rpc-api-1.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-environment-common-2.2.13.Final.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-databind-2.5.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-classfilewriter-1.0.5.Final.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.xml.registry-api-1.0.7.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive validation-api-1.1.0.Final.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive tiger-types-1.4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive shoal-gms-api-1.6.18.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.mail-api-1.5.4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.ejb-api-3.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.management.j2ee-api-1.1.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive weld-api-2.2.SP4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive exception-annotation-processor-4.0.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive woodstox-core-asl-4.2.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.el-3.0.1-b10.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive hamcrest-library-1.3.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jackson-annotations-2.5.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive activation-1.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive log4j-api-2.8.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive xmlsec-1.5.8.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive hamcrest-core-1.3.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive guava-13.0.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.security.jacc-api-1.5.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive api-exporter-4.1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive test-classes
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.persistence-2.1.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.interceptor-api-1.2.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.security.auth.message-api-1.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.mail-1.5.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive gmbal-api-only-3.0.0-b023.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive simplestub-1.0.4.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.inject-1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive org.osgi.core-1.2.0.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jaxb-extra-osgi-2.2.12-b141219.1637.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive tools.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive jboss-el-api_3.0_spec-1.0.0.Alpha1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.el-api-3.0.1-b03.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMACIÓN: [DeploymentElement] adding library to ScatteredArchive javax.jms-api-2.0.1.jar
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+INFORMACIÓN: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@7cb8109
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
 INFORMACIÓN: [EJBContainerImpl] GlassFish status: STARTED
-mar 08, 2018 2:27:53 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+mar 12, 2018 3:11:40 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
 INFORMACIÓN: [EJBContainerImpl] Deploying as a ScatteredArchive
-mar 08, 2018 2:28:40 AM com.sun.enterprise.security.SecurityLifecycle &lt;init&gt;
+mar 12, 2018 3:12:10 AM com.sun.enterprise.security.SecurityLifecycle &lt;init&gt;
 INFORMACIÓN: Java security manager is disabled.
-mar 08, 2018 2:28:40 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+mar 12, 2018 3:12:10 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
 INFORMACIÓN: Entering Security Startup Service.
-mar 08, 2018 2:28:40 AM com.sun.enterprise.security.PolicyLoader loadPolicy
+mar 12, 2018 3:12:10 AM com.sun.enterprise.security.PolicyLoader loadPolicy
 INFORMACIÓN: Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.
-mar 08, 2018 2:28:40 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+mar 12, 2018 3:12:10 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
 INFORMACIÓN: Security Service(s) started successfully.
-mar 08, 2018 2:28:41 AM org.glassfish.api.ActionReport failure
-GRAVE: Exception while invoking class org.glassfish.persistence.jpa.JPADeployer prepare method
-java.lang.RuntimeException: The persistence-context-ref-name [mx.com.sga.els.PersonaDaoImpl/em] in module [classes] resolves to a persistence unit called [PersonaPU] which is of type RESOURCE_LOCAL. Only persistence units with transaction type JTA can be used as a container managed entity manager. Please verify your application.
-	at com.sun.enterprise.deployment.BundleDescriptor.findReferencedPUViaEMRef(BundleDescriptor.java:754)
-	at com.sun.enterprise.deployment.BundleDescriptor.findReferencedPUsViaPCRefs(BundleDescriptor.java:735)
-	at org.glassfish.ejb.deployment.descriptor.EjbBundleDescriptorImpl.findReferencedPUs(EjbBundleDescriptorImpl.java:870)
-	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:186)
-	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
-	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
-	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+mar 12, 2018 3:12:46 AM org.eclipse.persistence.default
+INFORMACIÓN: Detected server platform: org.eclipse.persistence.platform.server.NoServerPlatform.
+mar 12, 2018 3:12:46 AM org.eclipse.persistence.session./file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU
+INFORMACIÓN: EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258
+mar 12, 2018 3:12:48 AM org.eclipse.persistence.session./file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU.connection
+INFORMACIÓN: /file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU login successful
+mar 12, 2018 3:12:48 AM org.eclipse.persistence.session./file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU.server
+ADVERTENCIA: Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
+mar 12, 2018 3:12:49 AM com.sun.ejb.containers.BaseContainer initializeHome
+INFORMACIÓN: Portable JNDI names for EJB PersonaDaoImpl: [java:global/classes/PersonaDaoImpl, java:global/classes/PersonaDaoImpl!mx.com.sga.els.PersonaDao]
+mar 12, 2018 3:13:00 AM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
+INFORMACIÓN: JTS5014: Recoverable JTS instance, serverId = [3700]
+mar 12, 2018 3:13:01 AM org.glassfish.enterprise.iiop.impl.CSIv2SSLTaggedComponentHandlerImpl extract
+ADVERTENCIA: Exception getting SocketInfo
+java.lang.RuntimeException: Orb initialization erorr
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:191)
+	at com.sun.enterprise.iiop.security.SecurityMechanismSelector.getCtc(SecurityMechanismSelector.java:338)
+	at com.sun.enterprise.iiop.security.SecurityMechanismSelector.selectSecurityMechanism(SecurityMechanismSelector.java:990)
+	at com.sun.enterprise.iiop.security.SecurityMechanismSelector.getSSLPorts(SecurityMechanismSelector.java:348)
+	at com.sun.enterprise.iiop.security.SecurityMechanismSelector.getSSLSocketInfo(SecurityMechanismSelector.java:542)
+	at com.sun.enterprise.iiop.security.IIOPSSLUtilImpl.getSSLPortsAsSocketInfo(IIOPSSLUtilImpl.java:143)
+	at org.glassfish.enterprise.iiop.impl.CSIv2SSLTaggedComponentHandlerImpl.extract(CSIv2SSLTaggedComponentHandlerImpl.java:152)
+	at com.sun.corba.ee.impl.folb.ClientGroupManager.getSocketInfo(ClientGroupManager.java:205)
+	at com.sun.corba.ee.impl.transport.ContactInfoListImpl.addRemoteContactInfos(ContactInfoListImpl.java:401)
+	at com.sun.corba.ee.impl.transport.ContactInfoListImpl.createContactInfoList(ContactInfoListImpl.java:376)
+	at com.sun.corba.ee.impl.transport.ContactInfoListImpl.iterator(ContactInfoListImpl.java:188)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:193)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at com.sun.jts.CosTransactions.DefaultTransactionService.createPOAs(DefaultTransactionService.java:388)
+	at com.sun.jts.CosTransactions.DefaultTransactionService.identify_ORB(DefaultTransactionService.java:202)
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createInterceptor(TransactionIIOPInterceptorFactory.java:145)
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createClientRequestInterceptor(TransactionIIOPInterceptorFactory.java:97)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBInitializer.post_init(GlassFishORBInitializer.java:132)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.postInitORBInitializers(PIHandlerImpl.java:917)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.initialize(PIHandlerImpl.java:267)
+	at com.sun.corba.ee.impl.orb.ORBImpl.postInit(ORBImpl.java:636)
+	at com.sun.corba.ee.impl.orb.ORBImpl.set_parameters(ORBImpl.java:697)
+	at com.sun.corba.ee.impl.orb.ORBImpl.setParameters(ORBImpl.java:684)
+	at com.sun.corba.ee.spi.osgi.ORBFactory.initialize(ORBFactory.java:107)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:585)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
 	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
 	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at javax.security.auth.Subject.doAs(Subject.java:360)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at javax.security.auth.Subject.doAs(Subject.java:360)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
 	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
 	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
 	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
 	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
-	at test.PersonaServiceTest.iniciarContenedor(PersonaServiceTest.java:29)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -617,41 +645,219 @@ java.lang.RuntimeException: The persistence-context-ref-name [mx.com.sga.els.Per
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-mar 08, 2018 2:28:41 AM org.glassfish.api.ActionReport failure
-GRAVE: Exception while preparing the app
-mar 08, 2018 2:28:41 AM com.sun.enterprise.v3.server.ApplicationLifecycle deploy
-GRAVE: Exception during lifecycle processing
-java.lang.RuntimeException: The persistence-context-ref-name [mx.com.sga.els.PersonaDaoImpl/em] in module [classes] resolves to a persistence unit called [PersonaPU] which is of type RESOURCE_LOCAL. Only persistence units with transaction type JTA can be used as a container managed entity manager. Please verify your application.
-	at com.sun.enterprise.deployment.BundleDescriptor.findReferencedPUViaEMRef(BundleDescriptor.java:754)
-	at com.sun.enterprise.deployment.BundleDescriptor.findReferencedPUsViaPCRefs(BundleDescriptor.java:735)
-	at org.glassfish.ejb.deployment.descriptor.EjbBundleDescriptorImpl.findReferencedPUs(EjbBundleDescriptorImpl.java:870)
-	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:186)
-	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
-	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
-	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+Caused by: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.spi.servicecontext.ServiceContextsCache.get(ServiceContextsCache.java:72)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:786)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.is_a(ClientDelegateImpl.java:378)
+	at org.omg.CORBA.portable.ObjectImpl._is_a(ObjectImpl.java:130)
+	at org.omg.CosNaming.NamingContextHelper.narrow(NamingContextHelper.java:69)
+	at com.sun.jndi.cosnaming.CNCtx.setOrbAndRootContext(CNCtx.java:396)
+	at com.sun.jndi.cosnaming.CNCtx.initOrbAndRootContext(CNCtx.java:290)
+	at com.sun.jndi.cosnaming.CNCtx.&lt;init&gt;(CNCtx.java:120)
+	at com.sun.jndi.cosnaming.CNCtxFactory.getInitialContext(CNCtxFactory.java:49)
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:684)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:313)
+	at javax.naming.InitialContext.init(InitialContext.java:244)
+	at javax.naming.InitialContext.&lt;init&gt;(InitialContext.java:216)
+	at com.sun.enterprise.naming.impl.GlassfishNamingManagerImpl.initializeRemoteNamingSupport(GlassfishNamingManagerImpl.java:166)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:182)
+	... 96 more
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 116 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 122 more
+
+mar 12, 2018 3:13:01 AM com.sun.jts.CosTransactions.DefaultTransactionService identify_ORB
+ADVERTENCIA: JTS5015: Unexpected error occurred when creating portable object adaptors
+org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:821)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at com.sun.jts.CosTransactions.DefaultTransactionService.createPOAs(DefaultTransactionService.java:388)
+	at com.sun.jts.CosTransactions.DefaultTransactionService.identify_ORB(DefaultTransactionService.java:202)
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createInterceptor(TransactionIIOPInterceptorFactory.java:145)
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createClientRequestInterceptor(TransactionIIOPInterceptorFactory.java:97)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBInitializer.post_init(GlassFishORBInitializer.java:132)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.postInitORBInitializers(PIHandlerImpl.java:917)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.initialize(PIHandlerImpl.java:267)
+	at com.sun.corba.ee.impl.orb.ORBImpl.postInit(ORBImpl.java:636)
+	at com.sun.corba.ee.impl.orb.ORBImpl.set_parameters(ORBImpl.java:697)
+	at com.sun.corba.ee.impl.orb.ORBImpl.setParameters(ORBImpl.java:684)
+	at com.sun.corba.ee.spi.osgi.ORBFactory.initialize(ORBFactory.java:107)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:585)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
 	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
 	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at javax.security.auth.Subject.doAs(Subject.java:360)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at javax.security.auth.Subject.doAs(Subject.java:360)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
-	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
 	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
 	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
 	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
 	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
-	at test.PersonaServiceTest.iniciarContenedor(PersonaServiceTest.java:29)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 91 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 97 more
+
+mar 12, 2018 3:13:01 AM org.glassfish.enterprise.iiop.impl.GlassFishORBInitializer post_init
+ADVERTENCIA: Exception registering interceptors
+java.lang.RuntimeException: JTS Exception: org.omg.CORBA.INTERNAL:   vmcid: 0x0  minor code: 265  completed: No
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createInterceptor(TransactionIIOPInterceptorFactory.java:173)
+	at com.sun.enterprise.transaction.jts.iiop.TransactionIIOPInterceptorFactory.createClientRequestInterceptor(TransactionIIOPInterceptorFactory.java:97)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBInitializer.post_init(GlassFishORBInitializer.java:132)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.postInitORBInitializers(PIHandlerImpl.java:917)
+	at com.sun.corba.ee.impl.interceptors.PIHandlerImpl.initialize(PIHandlerImpl.java:267)
+	at com.sun.corba.ee.impl.orb.ORBImpl.postInit(ORBImpl.java:636)
+	at com.sun.corba.ee.impl.orb.ORBImpl.set_parameters(ORBImpl.java:697)
+	at com.sun.corba.ee.impl.orb.ORBImpl.setParameters(ORBImpl.java:684)
+	at com.sun.corba.ee.spi.osgi.ORBFactory.initialize(ORBFactory.java:107)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:585)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
+	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
+	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -682,15 +888,476 @@ java.lang.RuntimeException: The persistence-context-ref-name [mx.com.sga.els.Per
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 
-mar 08, 2018 2:28:41 AM org.glassfish.deployment.admin.DeployCommand execute
-GRAVE: Exception while preparing the app : The persistence-context-ref-name [mx.com.sga.els.PersonaDaoImpl/em] in module [classes] resolves to a persistence unit called [PersonaPU] which is of type RESOURCE_LOCAL. Only persistence units with transaction type JTA can be used as a container managed entity manager. Please verify your application.
-mar 08, 2018 2:28:42 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createEJBContainer
+mar 12, 2018 3:13:01 AM org.glassfish.enterprise.iiop.impl.GlassFishORBManager initORB
+GRAVE: enterprise_util.excep_in_createorb
+org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:821)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:590)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
+	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
+	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 80 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 86 more
+
+mar 12, 2018 3:13:01 AM org.glassfish.internal.data.ModuleInfo load
+GRAVE: Exception while invoking class org.glassfish.ejb.startup.EjbDeployer load method
+java.lang.RuntimeException: EJB Container initialization error
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:234)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
+	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
+	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.lang.RuntimeException: IIOP Protocol Manager initialization failed.  Possible cause is that ORB is not available in this container
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:901)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	... 57 more
+Caused by: java.lang.RuntimeException: Orb initialization erorr
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:191)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	... 62 more
+Caused by: java.lang.RuntimeException: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:626)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	... 64 more
+Caused by: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:821)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:590)
+	... 67 more
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 80 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 86 more
+
+mar 12, 2018 3:13:01 AM com.sun.enterprise.v3.server.ApplicationLifecycle deploy
+GRAVE: Exception during lifecycle processing
+java.lang.RuntimeException: EJB Container initialization error
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:234)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
+	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
+	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.lang.RuntimeException: IIOP Protocol Manager initialization failed.  Possible cause is that ORB is not available in this container
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:901)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	... 57 more
+Caused by: java.lang.RuntimeException: Orb initialization erorr
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:191)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	... 62 more
+Caused by: java.lang.RuntimeException: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:626)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	... 64 more
+Caused by: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:821)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:590)
+	... 67 more
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 80 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 86 more
+
+mar 12, 2018 3:13:01 AM org.glassfish.api.ActionReport failure
+GRAVE: Exception while loading the app
+mar 12, 2018 3:13:01 AM org.eclipse.persistence.session./file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU.connection
+INFORMACIÓN: /file:/tmp/gfembed5520886312718095913tmp/applications/classes/_PersonaPU logout successful
+mar 12, 2018 3:13:01 AM org.glassfish.deployment.admin.DeployCommand execute
+GRAVE: Exception while loading the app : EJB Container initialization error
+java.lang.RuntimeException: IIOP Protocol Manager initialization failed.  Possible cause is that ORB is not available in this container
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:901)
+	at com.sun.ejb.containers.BaseContainer.&lt;init&gt;(BaseContainer.java:657)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:143)
+	at com.sun.ejb.containers.StatelessSessionContainer.&lt;init&gt;(StatelessSessionContainer.java:137)
+	at com.sun.ejb.containers.StatelessContainerFactory.createContainer(StatelessContainerFactory.java:61)
+	at org.glassfish.ejb.startup.EjbApplication.loadContainers(EjbApplication.java:221)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:291)
+	at org.glassfish.ejb.startup.EjbDeployer.load(EjbDeployer.java:99)
+	at org.glassfish.internal.data.ModuleInfo.load(ModuleInfo.java:206)
+	at org.glassfish.internal.data.ApplicationInfo.load(ApplicationInfo.java:313)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:539)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:535)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:534)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:565)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:557)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:556)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1464)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:109)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1846)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1722)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:133)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:109)
+	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:138)
+	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
+	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.lang.RuntimeException: Orb initialization erorr
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:191)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getProtocolManager(GlassFishORBHelper.java:231)
+	at com.sun.ejb.containers.BaseContainer.initializeProtocolManager(BaseContainer.java:898)
+	... 62 more
+Caused by: java.lang.RuntimeException: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:626)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.getORB(GlassFishORBManager.java:264)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBFactoryImpl.createORB(GlassFishORBFactoryImpl.java:93)
+	at org.glassfish.enterprise.iiop.api.GlassFishORBHelper.getORB(GlassFishORBHelper.java:163)
+	... 64 more
+Caused by: org.omg.CORBA.OBJ_ADAPTER: ADVERTENCIA: 02310002: Error in connecting servant to ORB  vmcid: OMG  minor code: 2  completed: No
+	at com.sun.proxy.$Proxy180.orbConnectError(Unknown Source)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1692)
+	at com.sun.corba.ee.spi.presentation.rmi.StubAdapter.connect(StubAdapter.java:216)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getIOR(ORBImpl.java:2082)
+	at com.sun.corba.ee.impl.orb.ORBImpl.getFVDCodeBaseIOR(ORBImpl.java:981)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.addServiceContexts(ClientRequestDispatcherImpl.java:821)
+	at com.sun.corba.ee.impl.protocol.ClientRequestDispatcherImpl.beginRequest(ClientRequestDispatcherImpl.java:292)
+	at com.sun.corba.ee.impl.protocol.ClientDelegateImpl.request(ClientDelegateImpl.java:220)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.invoke(BootstrapResolverImpl.java:112)
+	at com.sun.corba.ee.impl.resolver.BootstrapResolverImpl.resolve(BootstrapResolverImpl.java:145)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.resolver.CompositeResolverImpl.resolve(CompositeResolverImpl.java:61)
+	at com.sun.corba.ee.impl.orb.ORBImpl.resolve_initial_references(ORBImpl.java:1259)
+	at org.glassfish.enterprise.iiop.impl.GlassFishORBManager.initORB(GlassFishORBManager.java:590)
+	... 67 more
+Caused by: org.omg.CORBA.COMM_FAILURE: GRAVE: 00410016: Unable to create IIOP listener on the specified host all interfaces and port 3,700  vmcid: OMG  minor code: 16  completed: No
+	at com.sun.proxy.$Proxy180.createListenerFailed(Unknown Source)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:98)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.getAcceptors(TransportManagerImpl.java:232)
+	at com.sun.corba.ee.impl.transport.TransportManagerImpl.addToIORTemplate(TransportManagerImpl.java:251)
+	at com.sun.corba.ee.spi.oa.ObjectAdapterBase.initializeTemplate(ObjectAdapterBase.java:103)
+	at com.sun.corba.ee.impl.oa.toa.TOAImpl.&lt;init&gt;(TOAImpl.java:133)
+	at com.sun.corba.ee.impl.oa.toa.TOAFactory.getTOA(TOAFactory.java:118)
+	at com.sun.corba.ee.impl.orb.ORBImpl.connect(ORBImpl.java:1690)
+	... 80 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67)
+	at org.glassfish.enterprise.iiop.impl.IIOPSSLSocketFactory.createServerSocket(IIOPSSLSocketFactory.java:297)
+	at com.sun.corba.ee.impl.transport.AcceptorImpl.initialize(AcceptorImpl.java:91)
+	... 86 more
+
+mar 12, 2018 3:13:04 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createEJBContainer
 INFORMACIÓN: [EJBContainerProviderImpl] Cleaning up on failure ...
-mar 08, 2018 2:28:42 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+mar 12, 2018 3:13:04 AM com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl sendStopToResourceAdapter
+INFORMACIÓN: RAR7094: __cp_jdbc_ra shutdown successful.
+mar 12, 2018 3:13:04 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 INFORMACIÓN: JMXStartupService and JMXConnectors have been shut down.
-mar 08, 2018 2:28:42 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+mar 12, 2018 3:13:04 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 INFORMACIÓN: JMXStartupService and JMXConnectors have been shut down.
-mar 08, 2018 2:28:42 AM com.sun.enterprise.v3.server.AppServerStartup stop
+mar 12, 2018 3:13:04 AM com.sun.enterprise.v3.server.AppServerStartup stop
 INFORMACIÓN: Shutdown procedure finished
 </system-err>
   </testcase>

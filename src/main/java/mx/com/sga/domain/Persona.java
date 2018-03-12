@@ -21,50 +21,50 @@ import javax.persistence.Table;
  */
 @Entity
 @NamedQueries({
-@NamedQuery(name = "Persona.findAll", query = "SELECT p.* FROM Persona p ")})
+@NamedQuery(name = "Persona.findAll", query = "SELECT p FROM Persona p ORDER BY p.idPersona")})
 @Table(name = "Persona")
 public class Persona implements Serializable{
     
     
-private static final long  serialVersionUID= 1L;
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id_persona")
-private int idPersona;
+    private static final long  serialVersionUID= 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_persona")
+    private int idPersona;
 
-@Column(nullable = false, length = 45)
-private String nombre;
+    @Column(nullable = false, length = 45)
+    private String nombre;
 
-@Column(name = "apellido_paterno", nullable = false, length = 45)
-private String apePaterno;
+    @Column(name = "apellido_paterno", nullable = false, length = 45)
+    private String apePaterno;
 
-@Column(name = "apellido_materno", length = 45)
-private String apeMaterno;
+    @Column(name = "apellido_materno", length = 45)
+    private String apeMaterno;
 
-@Column(nullable = false, length = 45)
-private String email;
+    @Column(nullable = false, length = 45)
+    private String email;
 
-@Column(length = 45)
-private String telefono;
+    @Column(length = 45)
+    private String telefono;
 
-public Persona(){}
+    public Persona(){}
 
-public Persona(int idPersona) {
-   
-    this.idPersona = idPersona;
-}
+    public Persona(int idPersona) {
 
-public Persona( int idPersona,String nombre,String apePaterno,String apeMaterno,
-        String email,String telefono){
-super();
-this.idPersona=idPersona;
-this.nombre=nombre;
-this.apePaterno=apePaterno;
-this.apeMaterno=apeMaterno;
-this.email=email;
-this.telefono=telefono;
+        this.idPersona = idPersona;
+    }
 
-}
+    public Persona( int idPersona,String nombre,String apePaterno,String apeMaterno,
+            String email,String telefono){
+    super();
+    this.idPersona=idPersona;
+    this.nombre=nombre;
+    this.apePaterno=apePaterno;
+    this.apeMaterno=apeMaterno;
+    this.email=email;
+    this.telefono=telefono;
+
+    }
 
     public int getIdPersona() {
         return idPersona;

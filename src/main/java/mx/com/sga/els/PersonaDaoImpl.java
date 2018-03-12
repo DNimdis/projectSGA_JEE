@@ -4,10 +4,8 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import javax.persistence.Query;
 import mx.com.sga.domain.Persona;
-import mx.com.sga.els.PersonaDao;
 
 @Stateless
 public class PersonaDaoImpl implements PersonaDao {

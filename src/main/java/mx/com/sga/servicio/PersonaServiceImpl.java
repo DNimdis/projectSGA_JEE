@@ -6,7 +6,6 @@
 package mx.com.sga.servicio;
 
 import java.util.List;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import mx.com.sga.domain.Persona;
@@ -19,6 +18,7 @@ import mx.com.sga.els.PersonaDao;
 @Stateless
 public class PersonaServiceImpl implements PersonaServiceRemote, PersonaServiceLocal{
     
+    //@EJB 
     @Inject
     private PersonaDao personaDao;
 

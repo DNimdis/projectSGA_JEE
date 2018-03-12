@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: test.PersonaServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 84.077 sec <<< FAILURE!
-testEJB(test.PersonaServiceTest)  Time elapsed: 83.462 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 95.612 sec <<< FAILURE!
+testEJBPersonaService(test.PersonaServiceTest)  Time elapsed: 95.437 sec  <<< ERROR!
 javax.ejb.EJBException: Failed to deploy EJB modules - see log for details
 	at org.glassfish.ejb.embedded.EJBContainerImpl.deploy(EJBContainerImpl.java:149)
 	at org.glassfish.ejb.embedded.EJBContainerProviderImpl.createEJBContainer(EJBContainerProviderImpl.java:134)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:127)
 	at javax.ejb.embeddable.EJBContainer.createEJBContainer(EJBContainer.java:102)
-	at test.PersonaServiceTest.iniciarContenedor(PersonaServiceTest.java:29)
+	at test.PersonaServiceTest.setup(PersonaServiceTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
